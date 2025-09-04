@@ -61,7 +61,7 @@ let pokemon: Pokemon
                     Spacer()
                         .frame(height: 100)
                     NavigationLink{
-                        KantoScreen()
+                        RegionSelectScreen()
                     } label: {
                         Text("Back")
                             .font(.system(size: 50, weight: .semibold))
