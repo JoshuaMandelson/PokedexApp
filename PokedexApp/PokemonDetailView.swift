@@ -50,14 +50,16 @@ let pokemon: Pokemon
                     }//End H stack
                     Spacer()
                         .frame(height: 100)
-                    Text(pokemon.description)
-                        .font(.system(size: 30, weight: .semibold))
-                        .padding(.horizontal, 36)
-                        .padding(.vertical, 16)
-                        .frame(width: 800)
-                        .foregroundColor(.black)
-                        .background(Color.white)
-                        .cornerRadius(50)
+                    ScrollView{
+                        Text(pokemon.description)
+                            .font(.system(size: 30, weight: .semibold))
+                            .padding(.horizontal, 36)
+                            .padding(.vertical, 16)
+                            .frame(width: 800)
+                            .foregroundColor(.black)
+                            .background(Color.white)
+                            .cornerRadius(50)
+                    }
                     Spacer()
                         .frame(height: 100)
                     NavigationLink{
