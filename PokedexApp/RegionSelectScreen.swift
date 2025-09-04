@@ -14,16 +14,45 @@ struct RegionSelectScreen: View {
                 Image("pokemon-background")
                     .resizable()
                 
-                HStack {
-                    NavigationLink {
+                VStack {
+                    HStack {
+                        NavigationLink {
+                            KantoScreen()
+                        } label: {
+                            Text("Kanto")
+                                .font(.system(size: 50, weight: .semibold))
+                                .padding(.horizontal, 36)
+                                .padding(.vertical, 16)
+                                .foregroundColor(.black)
+                                .background(Color.white)
+                        }
+                        Spacer()
+                            .frame(width: 100)
+                        NavigationLink {
+                            
+                        } label: {
+                            Text("Johto")
+                                .font(.system(size: 50, weight: .semibold))
+                                .padding(.horizontal, 36)
+                                .padding(.vertical, 16)
+                                .foregroundColor(.black)
+                                .background(Color.white)
+                        }
                         
+                    }//End H stack
+                    Spacer()
+                        .frame(height: 200)
+                    NavigationLink {
+                        HomeView()
                     } label: {
-                        Text("Get Started")
+                        Text("Back")
                             .font(.system(size: 50, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
+                            .foregroundColor(.black)
+                            .background(Color.white)
                     }
-                }
+                }//End V stack
                     
             } //End Z stack
             .frame(width: 1280, height: 720)
@@ -33,5 +62,5 @@ struct RegionSelectScreen: View {
 }
 
 #Preview {
-    ContentView()
+    RegionSelectScreen()
 }
