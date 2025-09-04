@@ -15,6 +15,7 @@ struct RegionSelectScreen: View {
                     .resizable()
                 
                 VStack {
+                    Spacer()
                     HStack {
                         NavigationLink {
                             KantoScreen()
@@ -25,11 +26,12 @@ struct RegionSelectScreen: View {
                                 .padding(.vertical, 16)
                                 .foregroundColor(.black)
                                 .background(Color.white)
+                                .cornerRadius(50)
                         }
                         Spacer()
                             .frame(width: 100)
                         NavigationLink {
-                            
+                            JohtoScreen()
                         } label: {
                             Text("Johto")
                                 .font(.system(size: 50, weight: .semibold))
@@ -37,11 +39,12 @@ struct RegionSelectScreen: View {
                                 .padding(.vertical, 16)
                                 .foregroundColor(.black)
                                 .background(Color.white)
+                                .cornerRadius(50)
                         }
                         
                     }//End H stack
                     Spacer()
-                        .frame(height: 200)
+                        .frame(height: 400)
                     NavigationLink {
                         HomeView()
                     } label: {
@@ -49,9 +52,10 @@ struct RegionSelectScreen: View {
                             .font(.system(size: 50, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
-                            .foregroundColor(.black)
-                            .background(Color.white)
+                            .foregroundColor(.white)
                     }
+                    Spacer()
+                        .frame(height: 20)
                 }//End V stack
                     
             } //End Z stack
