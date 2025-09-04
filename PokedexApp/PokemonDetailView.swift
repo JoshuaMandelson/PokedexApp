@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
+let pokemon: Pokemon
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,8 +19,8 @@ struct PokemonDetailView: View {
                     HStack {
                         
                         
-                        Text("Bulbasaur")
-                            .font(.system(size: 50, weight: .semibold))
+                        Text("\(pokemon.name)")
+                            .font(.system(size: 40, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
                             .foregroundColor(.black)
@@ -29,14 +30,14 @@ struct PokemonDetailView: View {
                             .cornerRadius(50)
                         Spacer()
                             .frame(width: 100)
-                        Image("001")
+                        Image(String(format: "%03d", pokemon.number))
                             .resizable()
                             .frame(width: 300, height: 300)
                             .background(Color.white)
                             .cornerRadius(50)
                         Spacer()
                             .frame(width: 100)
-                        Text("001")
+                        Text(String(format: "%03d", pokemon.number))
                             .font(.system(size: 50, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
@@ -49,7 +50,7 @@ struct PokemonDetailView: View {
                     }//End H stack
                     Spacer()
                         .frame(height: 100)
-                    Text("A small quadruped that nurtures a plant bulb on its back; the bulb stores energy for growth.")
+                    Text(pokemon.description)
                         .font(.system(size: 30, weight: .semibold))
                         .padding(.horizontal, 36)
                         .padding(.vertical, 16)
@@ -66,9 +67,7 @@ struct PokemonDetailView: View {
                             .font(.system(size: 50, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
-                            .foregroundColor(.black)
-                            .background(Color.white)
-                            .cornerRadius(50)
+                            .foregroundColor(.white)
                     }
                 }//End V stack
                 
@@ -78,6 +77,6 @@ struct PokemonDetailView: View {
     }
 }
 
-#Preview {
-    PokemonDetailView()
-}
+//#Preview {
+//    PokemonDetailView(pokemon: <#Pokemon#>)
+//}

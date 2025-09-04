@@ -23,7 +23,7 @@ struct KantoScreen: View {
                         ForEach(mons, id: \.number) { mon in
                             
                             NavigationLink {
-                                PokemonDetailView()
+                                PokemonDetailView(pokemon: mon)
                             } label: {
                                 HStack {
                                     Text("\(mon.number)")
@@ -35,9 +35,13 @@ struct KantoScreen: View {
                                         .font(.system(size: 50, weight: .semibold))
                                         .padding(.vertical, 16)
                                         .foregroundColor(.black)
-                                        .background(Color.white)
+                                        
                                     
                                 }// End H Stack for nav link
+                                .padding(.horizontal)
+                                .background(Color.white)
+                                .cornerRadius(50)
+                                
                             }
                             Spacer()
                                 .frame(width: 100)
@@ -46,15 +50,16 @@ struct KantoScreen: View {
                     Spacer()
                         .frame(height: 50)
                     NavigationLink {
-                        HomeView()
+                        RegionSelectScreen()
                     } label: {
                         Text("Back")
                             .font(.system(size: 50, weight: .semibold))
                             .padding(.horizontal, 36)
                             .padding(.vertical, 16)
-                            .foregroundColor(.black)
-                            .background(Color.white)
+                            .foregroundColor(.white)
                     }
+                    Spacer()
+                        .frame(height: 20)
                 }//End V stack
                     
             } //End Z stack
