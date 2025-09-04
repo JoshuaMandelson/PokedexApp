@@ -61,7 +61,11 @@ let pokemon: Pokemon
                     Spacer()
                         .frame(height: 100)
                     NavigationLink{
-                        RegionSelectScreen()
+                        if pokemon.number < 152 {
+                            KantoScreen()
+                        } else {
+                            JohtoScreen()
+                        }
                     } label: {
                         Text("Back")
                             .font(.system(size: 50, weight: .semibold))
