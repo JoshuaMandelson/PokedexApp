@@ -42,7 +42,7 @@ struct JohtoScreen: View {
                                 .background(Color.white)
                                 .cornerRadius(50)
                                 
-                            }
+                            }.buttonStyle(.plain) 
                             Spacer()
                                 .frame(width: 100)
                         }//End for loop

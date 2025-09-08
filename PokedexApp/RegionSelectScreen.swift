@@ -27,7 +27,7 @@ struct RegionSelectScreen: View {
                                 .foregroundColor(.black)
                                 .background(Color.white)
                                 .cornerRadius(50)
-                        }
+                        }.buttonStyle(.plain) 
                         Spacer()
                             .frame(width: 100)
                         NavigationLink {
@@ -40,7 +40,7 @@ struct RegionSelectScreen: View {
                                 .foregroundColor(.black)
                                 .background(Color.white)
                                 .cornerRadius(50)
-                        }
+                        }.buttonStyle(.plain)
                         
                     }//End H stack
                     Spacer()
